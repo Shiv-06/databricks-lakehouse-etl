@@ -1,5 +1,14 @@
 # Databricks Lakehouse ETL Pipeline (Enterprise-Style)
 
+## Enterprise Context
+This project mirrors production-grade data pipelines I have implemented
+in enterprise healthcare and financial analytics environments.
+
+Design patterns align with:
+• Databricks and EMR-based PySpark pipelines
+• Bronze / Silver / Gold lakehouse architecture
+• Data quality, validation, and governance requirements
+
 ## Business Context
 Designed an enterprise-grade lakehouse ETL pipeline to ingest high-volume
 transactional and API data, apply data quality controls, and deliver
