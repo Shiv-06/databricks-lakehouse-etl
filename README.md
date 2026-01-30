@@ -1,22 +1,37 @@
-# Databricks Lakehouse ETL Pipeline (Bronze → Silver → Gold)
+# Databricks Lakehouse ETL Pipeline (Enterprise-Style)
 
-## Problem Statement
-Build a scalable ETL pipeline to ingest raw transactional data, clean it, and create analytics-ready datasets.
+## Business Context
+Designed an enterprise-grade lakehouse ETL pipeline to ingest high-volume
+transactional and API data, apply data quality controls, and deliver
+analytics-ready datasets following Bronze, Silver, and Gold architecture.
+
+This project mirrors real-world data engineering patterns used in
+healthcare and financial analytics platforms.
 
 ## Architecture
-Source (CSV/API/DB) → Bronze (Raw) → Silver (Clean) → Gold (Business) → BI / Analytics
+Source (APIs / CSV / DB)
+→ Bronze (Raw Delta Tables)
+→ Silver (Validated & Standardized)
+→ Gold (Aggregated Business Metrics)
+→ BI / Analytics Consumers
 
 ## Tech Stack
-PySpark, Databricks, Delta Lake, AWS S3 (or local)
+PySpark, Databricks, Delta Lake, AWS S3, AWS Glue Data Catalog
+
+## Key Implementations
+• Incremental ingestion into Bronze layer  
+• PySpark-based cleansing and schema enforcement in Silver  
+• Business aggregations and KPI tables in Gold  
+• Data quality checks for nulls and duplicates  
+• Partitioning and performance-aware transformations  
 
 ## Data Flow
-1. Ingest raw data into Bronze tables
-2. Clean + standardize into Silver tables
-3. Create aggregated metrics into Gold tables
-4. Run data quality checks for nulls/duplicates
+1. Ingest raw data into Delta Bronze tables
+2. Apply validation, deduplication, and standardization in Silver
+3. Build analytics-ready Gold tables for reporting
+4. Validate outputs using data quality checks
 
-## Deliverables
-• Bronze/Silver/Gold tables  
-• Data quality checks  
-• Reproducible folder structure  
-• Documentation & run steps
+## Alignment with Enterprise Use Cases
+• Scalable ETL design
+• Governance-ready data layers
+• Analytics and BI consumption patterns
